@@ -104,7 +104,7 @@ class LoginPage extends GetView<LoginController> {
                     )
                 ],
               ),
-               onPressed: () {  },
+               onPressed: () => controller.toHome,
             ),
           ),
         ),
