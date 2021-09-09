@@ -58,7 +58,7 @@ class LoginPage extends GetView<LoginController> {
              "recuperar senha",
              textAlign: TextAlign.right,
            ), 
-           onPressed: () {  },
+           onPressed: ()  => controller.toRecupersenha(),
           ),
         ),
         SizedBox(
@@ -104,7 +104,7 @@ class LoginPage extends GetView<LoginController> {
                     )
                 ],
               ),
-               onPressed: () => controller.toHome,
+               onPressed: () => controller.toHome(),
             ),
           ),
         ),

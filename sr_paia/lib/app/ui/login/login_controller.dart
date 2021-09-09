@@ -17,5 +17,9 @@ class LoginController extends ICustomController {
 
   toHome() {
     Get.toNamed(Routes.HOME);
+  
+  }
+  toRecupersenha() {
+    Get.toNamed(Routes.SENHA);
   }
 }
