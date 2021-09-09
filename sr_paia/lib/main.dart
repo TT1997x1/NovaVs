@@ -9,8 +9,10 @@ import 'app/ui/login/login_page.dart';
         debugShowCheckedModeBanner: false,
       //  initialBinding: LoginBinding(),
         initialRoute: Routes.INITIAL,
-      //  theme: appThemeData,
         defaultTransition: Transition.fade,
+          theme: ThemeData(
+      primarySwatch: Colors.deepOrange,
+      ),
        // getPages: AppPages.pages,
         home:LoginPage(),
         locale: Locale('pt', 'BR'),

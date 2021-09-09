@@ -7,7 +7,7 @@ import 'package:sr_paia/app/routes/app_routes.dart';
 
 class HomeController extends ICustomController {
   final HomeRepository repository;
-  HomeController({required this.repository}) : assert(repository != null);
+  HomeController({required this.repository});
  
 
   @override

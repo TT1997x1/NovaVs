@@ -6,7 +6,7 @@ import 'package:sr_paia/app/routes/app_routes.dart';
 class LoginController extends  ICustomController {
 
    final LoginRepository repository;
-  LoginController({required this.repository}) : assert(repository != null); 
+  LoginController({required this.repository}); 
 
 
    toHome() {
