@@ -14,7 +14,7 @@ class SenhaPage extends GetView<SenhaController> {
           children: [
             Text("Insira o email cadastrado"),
             TextButton(
-                onPressed: () => controller.toFormList(), child: Text("Cadestre novamente"))
+                onPressed: () => controller.toCadastro(), child: Text("Cadestre novamente"))
           ],
         ),
       )),

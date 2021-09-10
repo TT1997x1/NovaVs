@@ -23,4 +23,12 @@ class LoginController extends ICustomController {
     Get.toNamed(Routes.SENHA);
     
   }
+  toCadastro() {
+    Get.toNamed(Routes.CADASTRO);
+    
+  }
+  toPrincipal() {
+    Get.toNamed(Routes.PRINCIPAL);
+    
+  }
 }
