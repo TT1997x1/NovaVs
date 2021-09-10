@@ -21,5 +21,6 @@ class LoginController extends ICustomController {
   }
   toRecupersenha() {
     Get.toNamed(Routes.SENHA);
+    
   }
 }
