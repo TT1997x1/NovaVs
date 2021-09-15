@@ -8,4 +8,5 @@
   static const SENHA = '/SENHA';
   static const CADASTRO = '/CADASTRO';
   static const PRINCIPAL = '/PRINCIPAL';
+  static const ANIMAIS = '/ANIMAIS';
  }

@@ -7,6 +7,7 @@ class LoginController extends ICustomController {
 
 
  final LoginRepository repository;
+  // ignore: unnecessary_null_comparison
   LoginController({required this.repository}) : assert(repository != null);
 
   @override
@@ -29,6 +30,10 @@ class LoginController extends ICustomController {
   }
   toPrincipal() {
     Get.toNamed(Routes.PRINCIPAL);
+    
+  }
+  toAnimal() {
+    Get.toNamed(Routes.ANIMAIS);
     
   }
 }

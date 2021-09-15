@@ -1,4 +1,4 @@
-import 'package:dio/dio.dart';
+/* import 'package:dio/dio.dart';
 
 BaseOptions options = new BaseOptions(
   baseUrl: " https://api.inova.granter.com.br/api/private", // Todo obter valor variavel ambiente 
@@ -6,4 +6,4 @@ BaseOptions options = new BaseOptions(
   receiveTimeout: 3000,
 );
 
-final Dio apiRest = new Dio(options);
+final Dio apiRest = new Dio(options); */
