@@ -16,13 +16,10 @@ class AnimaisController extends ICustomController {
 
   //set listAnimais(List<AnimaisModel> listAnimais) {}
   
- 
 
   @override
   void onInit() {
     super.onInit();
-
-   
   }
 
    getAnimais() async {
