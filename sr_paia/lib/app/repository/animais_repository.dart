@@ -1,5 +1,5 @@
 // ignore: import_of_legacy_library_into_null_safe
-import 'package:hasura/hasura.dart';
+import 'package:hasura_connect/hasura_connect.dart';
 import 'package:sr_paia/app/model/animais/animais_model.dart';
 
 class AnimaisRepository {
@@ -22,6 +22,10 @@ class AnimaisRepository {
   }
 }
     ''';
+
+   // _hasuraConnect.headers!.entries(
+   // {"x-hasura-admin-secret": "i8XQsYO19NP4BGk6IYHO41E6bFesa83f9TUNYnfuplEDknf4ajaXXwZ2V9wngFWc"}
+   // );
 
     var snapshot = await _hasuraConnect.query(query);
     for (var json in (snapshot['data']['animais']) as List) {
