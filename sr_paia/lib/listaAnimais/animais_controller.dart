@@ -10,9 +10,9 @@ class AnimaisController extends ICustomController {
 
    
 
-   var _animaisList = <AnimaisModel>[].obs;
-  //get animaisList => this._animaisList.value;
-  //set animaisList(value) => this._animaisList.value = value;
+   final _animaisList = <AnimaisModel>[].obs;
+   get animaisList => this._animaisList.value;
+   set animaisList(value) => this._animaisList.value = value;
 
   //set listAnimais(List<AnimaisModel> listAnimais) {}
   
@@ -20,6 +20,7 @@ class AnimaisController extends ICustomController {
   @override
   void onInit() {
     super.onInit();
+    getAnimais();
   }
 
    getAnimais() async {

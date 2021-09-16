@@ -12,13 +12,12 @@ class AnimaisRepository {
     AnimaisModel animaisModel;
     var query = '''
       query MyQuery {
-  Cachorro {
-    Id_cachorro
-    Nome
-    Raca
-    Cor
-    Sexo
-    Descricao
+  Animais {
+    Id_Animais
+    nome
+    raca
+    cor
+    descricao
   }
 }
     ''';
@@ -28,7 +27,7 @@ class AnimaisRepository {
    // );
 
     var snapshot = await _hasuraConnect.query(query);
-    for (var json in (snapshot['data']['animais']) as List) {
+    for (var json in (snapshot['data']['Animais']) as List) {
       animaisModel = AnimaisModel.fromJson(json);
       listAnimais.add(animaisModel);
     }
