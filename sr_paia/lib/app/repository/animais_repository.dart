@@ -6,18 +6,19 @@ class AnimaisRepository {
  final HasuraConnect _hasuraConnect;
 
   AnimaisRepository(this._hasuraConnect);
-
+  
   Future<List<AnimaisModel>> getAnimais() async {
     List<AnimaisModel> listAnimais = [];
     AnimaisModel animaisModel;
     var query = '''
       query MyQuery {
   Animais {
-    Id_Animais
-    nome
-    raca
-    cor
-    descricao
+    Id_Animais 
+    nome 
+    raca 
+    cor  
+    sexo
+    descricao 
   }
 }
     ''';
@@ -27,7 +28,7 @@ class AnimaisRepository {
    // );
 
     var snapshot = await _hasuraConnect.query(query);
-    for (var json in (snapshot['data']['Animais']) as List) {
+    for (var json in (snapshot['data'] ['Animais']) as List) {
       animaisModel = AnimaisModel.fromJson(json);
       listAnimais.add(animaisModel);
     }

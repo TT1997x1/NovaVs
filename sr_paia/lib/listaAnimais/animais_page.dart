@@ -12,7 +12,8 @@ class AnimaisPage extends GetView<AnimaisController> {
       appBar: AppBar(title: Text('Animais')),
       body: Container(
         child: GetX<AnimaisController>(
-            initState: (state) { Get.find<AnimaisController>().toAnimais() ;},
+            initState: (state) {
+               Get.find<AnimaisController>().getAnimais(); },
             builder: (_) {
               return 
               _.animaisList.length < 1
@@ -21,8 +22,8 @@ class AnimaisPage extends GetView<AnimaisController> {
               ListView.builder(
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text(_.animaisList[index].title),
-                    subtitle: Text(_.animaisList[index].body),
+                    title: Text(_.animaisList[index].nome),
+                    subtitle: Text(_.animaisList[index].raca),
                   );
                 },
                 itemCount: _.animaisList().length,

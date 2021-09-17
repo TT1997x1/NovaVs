@@ -6,6 +6,7 @@ AnimaisModel AnimaisModelFromJson(String str) => AnimaisModel.fromJson(json.deco
 // ignore: non_constant_identifier_names
 String AnimaisModelToJson(AnimaisModel data) => json.encode(data.toJson());
 
+
 class  AnimaisModel {
   static var obs;
 
