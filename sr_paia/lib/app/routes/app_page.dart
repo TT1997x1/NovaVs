@@ -1,6 +1,8 @@
 
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:sr_paia/app/routes/app_routes.dart';
+import 'package:sr_paia/app/ui/cad_animais/cad_bindings.dart';
+import 'package:sr_paia/app/ui/cad_animais/cad_page.dart';
 import 'package:sr_paia/app/ui/cadastro/cadastro_bindings.dart';
 import 'package:sr_paia/app/ui/cadastro/cadastro_page.dart';
 import 'package:sr_paia/app/ui/home/home_bindings.dart';
@@ -9,6 +11,8 @@ import 'package:sr_paia/app/ui/login/login_bindings.dart';
 import 'package:sr_paia/app/ui/login/login_page.dart';
 import 'package:sr_paia/app/ui/principal/principal_bindigs.dart';
 import 'package:sr_paia/app/ui/principal/principal_page.dart';
+import 'package:sr_paia/app/ui/produto/produto_bindings.dart';
+import 'package:sr_paia/app/ui/produto/produto_page.dart';
 import 'package:sr_paia/app/ui/senha/senha_bindings.dart';
 import 'package:sr_paia/app/ui/senha/senha_page.dart';
 import 'package:sr_paia/listaAnimais/animais_bindings.dart';
@@ -22,6 +26,8 @@ class AppPages {
     GetPage(name: Routes.SENHA, page: () => SenhaPage(), binding: SenhaBinding()),
     GetPage(name: Routes.CADASTRO, page: () => CadastroPage(), binding: CadastroBinding()),
     GetPage(name: Routes.PRINCIPAL, page: () => PrincipalPage(), binding: PrincipalBinding()),
-    GetPage(name: Routes.ANIMAIS, page: () => AnimaisPage(), binding: AnimaisBinding())
+    GetPage(name: Routes.ANIMAIS, page: () => AnimaisPage(), binding: AnimaisBinding()),
+    GetPage(name: Routes.PRODUTO, page: () => ProdutoPage(), binding: ProdutoBinding()),
+    GetPage(name: Routes.CAD_ANIMAIS, page: () => CadPage(), binding: CadBinding())
   ];
 }

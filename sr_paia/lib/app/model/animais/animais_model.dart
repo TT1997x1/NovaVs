@@ -1,43 +1,44 @@
 import 'dart:convert';
 
 // ignore: non_constant_identifier_names
-AnimaisModel AnimaisModelFromJson(String str) => AnimaisModel.fromJson(json.decode(str));
+AnimaisModel AnimaisModelFromJson(String str) =>
+    AnimaisModel.fromJson(json.decode(str));
 
 // ignore: non_constant_identifier_names
 String AnimaisModelToJson(AnimaisModel data) => json.encode(data.toJson());
 
-
-class  AnimaisModel {
+class AnimaisModel {
   static var obs;
 
-    AnimaisModel({
-        required this.nome,
-        required this.raca,
-        required this.cor,
-        required this.sexo,
-        required this.descricao,
-    });
+  AnimaisModel({
+    required this.idAnimal,
+    required this.nome,
+    required this.raca,
+    required this.cor,
+    required this.sexo,
+    required this.descricao,
+  });
+  int idAnimal;
+  String nome;
+  String raca;
+  String cor;
+  String sexo;
+  String descricao;
 
-    String nome;
-    String raca;
-    String cor;
-    String sexo;
-    String descricao;
+  factory AnimaisModel.fromJson(Map<String, dynamic> json) => AnimaisModel(
+      nome: json["nome"],
+      raca: json["raca"],
+      cor: json["cor"],
+      sexo: json["sexo"],
+      descricao: json["descricao"],
+      idAnimal: json["Id_Animais"]);
 
-    factory AnimaisModel.fromJson(Map<String, dynamic> json) => AnimaisModel(
-        nome: json["nome"],
-        raca: json["raca"],
-        cor: json["cor"],
-        sexo: json["sexo"],
-        descricao: json["descricao"],
-        
-    );
-
-    Map<String, dynamic> toJson() => {
+  Map<String, dynamic> toJson() => {
         "nome": nome,
         "raca": raca,
-        "cor" : cor,
+        "cor": cor,
         "sexo": sexo,
         "descricao": descricao,
-    };
-    }
+        "Id_Animais": idAnimal,
+      };
+}

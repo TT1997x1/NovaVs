@@ -9,4 +9,6 @@
   static const CADASTRO = '/CADASTRO';
   static const PRINCIPAL = '/PRINCIPAL';
   static const ANIMAIS = '/ANIMAIS';
+  static const PRODUTO = '/PRODUTO';
+  static const CAD_ANIMAIS = '/CAD_ANIMAIS';
  }
