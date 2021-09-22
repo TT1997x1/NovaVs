@@ -18,4 +18,12 @@ class HomeController extends ICustomController {
    toFormList() {
     Get.toNamed(Routes.FORM_LIST);
   } 
+  toAnimal() {
+    Get.toNamed(Routes.ANIMAIS);
+    
+  }
+  toProduto() {
+    Get.toNamed(Routes.PRODUTO);
+    
+  }
   }

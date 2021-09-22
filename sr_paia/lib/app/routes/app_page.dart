@@ -7,6 +7,8 @@ import 'package:sr_paia/app/ui/cadastro/cadastro_bindings.dart';
 import 'package:sr_paia/app/ui/cadastro/cadastro_page.dart';
 import 'package:sr_paia/app/ui/home/home_bindings.dart';
 import 'package:sr_paia/app/ui/home/home_page.dart';
+import 'package:sr_paia/app/ui/listaAnimais/animais_bindings.dart';
+import 'package:sr_paia/app/ui/listaAnimais/animais_page.dart';
 import 'package:sr_paia/app/ui/login/login_bindings.dart';
 import 'package:sr_paia/app/ui/login/login_page.dart';
 import 'package:sr_paia/app/ui/principal/principal_bindigs.dart';
@@ -15,8 +17,7 @@ import 'package:sr_paia/app/ui/produto/produto_bindings.dart';
 import 'package:sr_paia/app/ui/produto/produto_page.dart';
 import 'package:sr_paia/app/ui/senha/senha_bindings.dart';
 import 'package:sr_paia/app/ui/senha/senha_page.dart';
-import 'package:sr_paia/listaAnimais/animais_bindings.dart';
-import 'package:sr_paia/listaAnimais/animais_page.dart';
+
 
 class AppPages {
   static final pages = [

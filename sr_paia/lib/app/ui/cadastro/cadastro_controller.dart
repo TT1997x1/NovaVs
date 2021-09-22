@@ -20,4 +20,7 @@ class CadastroController extends ICustomController {
     Get.toNamed(Routes.PRINCIPAL);
     
   }
+  toProduto() {
+    Get.toNamed(Routes.PRODUTO);
+  }
   }

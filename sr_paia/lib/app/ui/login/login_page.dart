@@ -99,7 +99,7 @@ class LoginPage extends GetView<LoginController> {
                       )
                     ],
                   ),
-                  onPressed: () => controller.toAnimal(),
+                  onPressed: () => controller.toHome(),
                 ),
               ),
             ),

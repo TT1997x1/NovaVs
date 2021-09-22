@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:get/get.dart';
+import 'package:sr_paia/app/ui/listaAnimais/animais_controller.dart';
 
-import 'home_controller.dart';
 
-class HomePage extends GetView<HomeController> {
+class AnimaisPage extends GetView<AnimaisController> {
+//repository and controller  injection bindings
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text('Animais'),
         actions: [
           PopupMenuButton(
             itemBuilder: (context) {
@@ -48,7 +50,7 @@ class HomePage extends GetView<HomeController> {
               return list;
             },
             icon: Icon(
-              Icons.add_circle_outline,
+              Icons.settings,
               size: 50,
               color: Colors.white,
             ),
@@ -63,37 +65,27 @@ class HomePage extends GetView<HomeController> {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.only(top: 60, left: 40, right: 40),
-        color: Colors.white,
-        child: ListView(
-          children: <Widget>[
-            SizedBox(
-              width: 128,
-              height: 128,
-              child: Image.asset("assets/app-logo.png"),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            TextButton(
-              child: Text(
-                "Animais",
-                textAlign: TextAlign.center,
-              ),
-              onPressed: () => controller.toAnimal(),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextButton(
-              child: Text(
-                "Produtos",
-                textAlign: TextAlign.center,
-              ),
-              onPressed: () => controller.toProduto(),
-            ),
-          ],
-        ),
+        child: GetX<AnimaisController>(
+            //initState: (state) {
+            //   Get.find<AnimaisController>().getAnimais(); },
+            builder: (_) {
+          return _.animaisList.length < 1
+              ? Center(
+                  child: CircularProgressIndicator(),
+                )
+              : ListView.builder(
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      title: Text(_.animaisList[index].nome),
+                      subtitle: Text(_.animaisList[index].raca +
+                          _.animaisList[index].descricao),
+                      onTap: () => controller
+                          .toCad_animais(_.animaisList[index].idAnimal),
+                    );
+                  },
+                  itemCount: _.animaisList.length,
+                );
+        }),
       ),
     );
   }
