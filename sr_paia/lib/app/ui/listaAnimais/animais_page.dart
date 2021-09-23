@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sr_paia/app/ui/listaAnimais/animais_controller.dart';
 
-
 class AnimaisPage extends GetView<AnimaisController> {
 //repository and controller  injection bindings
 
@@ -49,11 +48,7 @@ class AnimaisPage extends GetView<AnimaisController> {
               );
               return list;
             },
-            icon: Icon(
-              Icons.settings,
-              size: 50,
-              color: Colors.white,
-            ),
+            icon: Icon(Icons.more_horiz, size: 50, color: Colors.black12),
             initialValue: 2,
             onCanceled: () {
               print("you");
