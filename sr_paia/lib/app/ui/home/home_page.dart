@@ -38,7 +38,7 @@ class HomePage extends GetView<HomeController> {
                 subtitle: Text("..."),
                 trailing: Icon(Icons.arrow_forward),
                 onTap: () {
-                  Navigator.pop(context);
+                 controller.toConsulta();
                 }),
             ListTile(
                 leading: Icon(Icons.account_circle),
@@ -46,7 +46,7 @@ class HomePage extends GetView<HomeController> {
                 subtitle: Text("..."),
                 trailing: Icon(Icons.pending_actions_outlined),
                 onTap: () {
-                  Navigator.pop(context);
+                  controller.toConsulta_on();
                 }),
             ListTile(
                 leading: Icon(Icons.account_circle),
@@ -54,7 +54,7 @@ class HomePage extends GetView<HomeController> {
                 subtitle: Text("..."),
                 trailing: Icon(Icons.pending_actions_outlined),
                 onTap: () {
-                  Navigator.pop(context);
+                  controller.toConsulta();
                 }),
             ListTile(
                 leading: Icon(Icons.account_circle),
@@ -69,54 +69,6 @@ class HomePage extends GetView<HomeController> {
         appBar: AppBar(
           title: Text('Home'),
           iconTheme: new IconThemeData(color: Colors.black),
-          /* actions: [
-            PopupMenuButton(
-              itemBuilder: (context) {
-                List<PopupMenuEntry> list = [];
-                list.add(
-                  PopupMenuItem(
-                    child: Text(" Minha Conta"),
-                    value: 1,
-                  ),
-                );
-                list.add(
-                  PopupMenuDivider(
-                    height: 10,
-                  ),
-                );
-                list.add(
-                  PopupMenuItem(
-                    child: Text(" Minhas consultas "),
-                    value: 1,
-                  ),
-                );
-                list.add(
-                  PopupMenuDivider(
-                    height: 10,
-                  ),
-                );
-                list.add(
-                  CheckedPopupMenuItem(
-                    child: Text(
-                      "Finalizar",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    value: 2,
-                    checked: true,
-                  ),
-                );
-                return list;
-              },
-              icon: Icon(Icons.more_horiz, size: 50, color: Colors.black12),
-              initialValue: 2,
-              onCanceled: () {
-                print("you");
-              },
-              onSelected: (value) {
-                print("value:$value");
-              },
-            ),
-          ], */
         ),
         body: Container(
           padding: EdgeInsets.only(top: 60, left: 40, right: 40),

@@ -26,4 +26,10 @@ class HomeController extends ICustomController {
     Get.toNamed(Routes.PRODUTO);
     
   }
+  toConsulta_on() {
+    Get.toNamed(Routes.CONSULTA_ON);
   }
+  toConsulta() {
+    Get.toNamed(Routes.CONSULTA);
+  }
+}

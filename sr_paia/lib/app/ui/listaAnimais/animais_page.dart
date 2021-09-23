@@ -16,7 +16,7 @@ class AnimaisPage extends GetView<AnimaisController> {
               List<PopupMenuEntry> list = [];
               list.add(
                 PopupMenuItem(
-                  child: Text(" Produtos"),
+                  child: Text(" Cadastrar novo animal "),
                   value: 1,
                 ),
               );
@@ -27,7 +27,7 @@ class AnimaisPage extends GetView<AnimaisController> {
               );
               list.add(
                 PopupMenuItem(
-                  child: Text(" Carrinho "),
+                  child: Text(" Editar animal cadastrado "),
                   value: 1,
                 ),
               );
@@ -48,7 +48,7 @@ class AnimaisPage extends GetView<AnimaisController> {
               );
               return list;
             },
-            icon: Icon(Icons.more_horiz, size: 50, color: Colors.black12),
+            icon: Icon(Icons.pets, size: 50, color: Colors.black12),
             initialValue: 2,
             onCanceled: () {
               print("you");
