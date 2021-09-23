@@ -133,7 +133,7 @@ class HomePage extends GetView<HomeController> {
               ),
               TextButton(
                 child: Text(
-                  "Animais",
+                  "Cadastrar animais",
                   textAlign: TextAlign.center,
                 ),
                 onPressed: () => controller.toAnimal(),
@@ -153,7 +153,7 @@ class HomePage extends GetView<HomeController> {
               ),
               TextButton(
                 child: Text(
-                  "Agendar consulta",
+                  "Assinatura Dog life",
                   textAlign: TextAlign.center,
                 ),
                 onPressed: () => controller.toAnimal(),
