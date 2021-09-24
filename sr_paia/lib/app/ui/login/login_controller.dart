@@ -36,4 +36,7 @@ class LoginController extends ICustomController {
     Get.toNamed(Routes.ANIMAIS);
     
   }
+  toNewHome() {
+    Get.toNamed(Routes.NEW_HOME);
+}
 }

@@ -15,6 +15,8 @@ import 'package:sr_paia/app/ui/listaAnimais/animais_bindings.dart';
 import 'package:sr_paia/app/ui/listaAnimais/animais_page.dart';
 import 'package:sr_paia/app/ui/login/login_bindings.dart';
 import 'package:sr_paia/app/ui/login/login_page.dart';
+import 'package:sr_paia/app/ui/new_home/new_home_bindings.dart';
+import 'package:sr_paia/app/ui/new_home/new_home_page.dart';
 import 'package:sr_paia/app/ui/principal/principal_bindigs.dart';
 import 'package:sr_paia/app/ui/principal/principal_page.dart';
 import 'package:sr_paia/app/ui/produto/produto_bindings.dart';
@@ -35,6 +37,7 @@ class AppPages {
     GetPage(name: Routes.PRODUTO, page: () => ProdutoPage(), binding: ProdutoBinding()),
     GetPage(name: Routes.CAD_ANIMAIS, page: () => CadPage(), binding: CadBinding()),
     GetPage(name: Routes.CONSULTA_ON, page: () => Consulta_onPage(), binding: Consulta_onBinding()),
-    GetPage(name: Routes.CONSULTA, page: () => ConsultaPage(), binding: ConsultaBinding())
+    GetPage(name: Routes.CONSULTA, page: () => ConsultaPage(), binding: ConsultaBinding()),
+    GetPage(name: Routes.NEW_HOME, page: () => NewHomePage(), binding: NewHomeBinding())
   ];
 }

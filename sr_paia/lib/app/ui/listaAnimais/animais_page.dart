@@ -16,9 +16,9 @@ class AnimaisPage extends GetView<AnimaisController> {
               List<PopupMenuEntry> list = [];
               list.add(
                 PopupMenuItem(
-                  child: Text(" Cadastrar novo animal "),
-                  value: 1,
-                ),
+                    child: Text(" Cadastrar novo animal "),
+                    value: 1,
+                    onTap: () => controller.toCad_animais(1)),
               );
               list.add(
                 PopupMenuDivider(

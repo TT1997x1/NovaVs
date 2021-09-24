@@ -100,7 +100,7 @@ class CadPage extends GetView<CadController> {
                 height: 40,
                 child: TextButton(
                   child: Text(
-                    " Alterar cadastro",
+                    " Salvar cadastro",
                     textAlign: TextAlign.center,
                   ),
                   onPressed: () => controller.toFormList()(),

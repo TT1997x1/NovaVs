@@ -4,6 +4,7 @@
   static const INITIAL = '/';
   static const LOGIN = '/LOGIN';
   static const HOME = '/HOME';
+   static const NEW_HOME = '/NEW_HOME';
   static const FORM_LIST = '/FORM_LIST';
   static const SENHA = '/SENHA';
   static const CADASTRO = '/CADASTRO';

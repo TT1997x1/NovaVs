@@ -65,7 +65,7 @@ class ConsultaPage extends GetView<ConsultaController> {
           children: <Widget>[
             TextFormField(
               autofocus: true,
-              keyboardType: TextInputType.emailAddress,
+              keyboardType: TextInputType.text,
               decoration: InputDecoration(
                 labelText: " Nome completo da pessoa",
                 labelStyle: TextStyle(
@@ -100,7 +100,7 @@ class ConsultaPage extends GetView<ConsultaController> {
               keyboardType: TextInputType.text,
               obscureText: true,
               decoration: InputDecoration(
-                labelText: " Raça do animal",
+                labelText: " Tipo animal",
                 labelStyle: TextStyle(
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
@@ -159,7 +159,7 @@ class ConsultaPage extends GetView<ConsultaController> {
             SizedBox(
               height: 10,
             ),
-            TextFormField(
+             TextFormField(
               autofocus: true,
               keyboardType: TextInputType.text,
               obscureText: true,
@@ -174,8 +174,8 @@ class ConsultaPage extends GetView<ConsultaController> {
             ),
             SizedBox(
               height: 10,
-            ),
-            TextFormField(
+            ), 
+             TextFormField(
               autofocus: true,
               keyboardType: TextInputType.text,
               obscureText: true,
@@ -187,7 +187,7 @@ class ConsultaPage extends GetView<ConsultaController> {
                   fontSize: 20,
                 ),
               ),
-            ),
+            ), 
             SizedBox(
               height: 30,
             ),

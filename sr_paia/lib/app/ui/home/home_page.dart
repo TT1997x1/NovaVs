@@ -3,6 +3,7 @@ import 'package:get/get_state_manager/src/simple/get_view.dart';
 
 import 'home_controller.dart';
 
+
 class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class HomePage extends GetView<HomeController> {
                 subtitle: Text("..."),
                 trailing: Icon(Icons.arrow_forward),
                 onTap: () {
-                 controller.toConsulta();
+                  controller.toConsulta();
                 }),
             ListTile(
                 leading: Icon(Icons.account_circle),
@@ -66,10 +67,10 @@ class HomePage extends GetView<HomeController> {
                 })
           ],
         )),
-        appBar: AppBar(
+       /*  appBar: AppBar(
           title: Text('Home'),
           iconTheme: new IconThemeData(color: Colors.black),
-        ),
+        ), */
         body: Container(
           padding: EdgeInsets.only(top: 60, left: 40, right: 40),
           color: Colors.white,
@@ -80,7 +81,7 @@ class HomePage extends GetView<HomeController> {
                 height: 128,
                 child: Image.asset("assets/app-logo.png"),
               ),
-              SizedBox(
+               SizedBox(
                 height: 20,
               ),
               TextButton(
@@ -95,7 +96,7 @@ class HomePage extends GetView<HomeController> {
               ),
               TextButton(
                 child: Text(
-                  "Produtos",
+                  "Nossa Historia",
                   textAlign: TextAlign.center,
                 ),
                 onPressed: () => controller.toProduto(),
@@ -109,7 +110,7 @@ class HomePage extends GetView<HomeController> {
                   textAlign: TextAlign.center,
                 ),
                 onPressed: () => controller.toAnimal(),
-              ),
+              ), 
             ],
           ),
         ));
