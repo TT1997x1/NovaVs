@@ -1,6 +1,8 @@
 
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:sr_paia/app/routes/app_routes.dart';
+import 'package:sr_paia/app/ui/agenda/agenda_bindings.dart';
+import 'package:sr_paia/app/ui/agenda/agenda_page.dart';
 import 'package:sr_paia/app/ui/cad_animais/cad_bindings.dart';
 import 'package:sr_paia/app/ui/cad_animais/cad_page.dart';
 import 'package:sr_paia/app/ui/cadastro/cadastro_bindings.dart';
@@ -9,6 +11,8 @@ import 'package:sr_paia/app/ui/consulta/consulta_bindings.dart';
 import 'package:sr_paia/app/ui/consulta/consulta_page.dart';
 import 'package:sr_paia/app/ui/consulta_on/consulta_on_bindings.dart';
 import 'package:sr_paia/app/ui/consulta_on/consulta_on_page.dart';
+import 'package:sr_paia/app/ui/historico/historico_bindings.dart';
+import 'package:sr_paia/app/ui/historico/historico_page.dart';
 import 'package:sr_paia/app/ui/home/home_bindings.dart';
 import 'package:sr_paia/app/ui/home/home_page.dart';
 import 'package:sr_paia/app/ui/listaAnimais/animais_bindings.dart';
@@ -38,6 +42,8 @@ class AppPages {
     GetPage(name: Routes.CAD_ANIMAIS, page: () => CadPage(), binding: CadBinding()),
     GetPage(name: Routes.CONSULTA_ON, page: () => Consulta_onPage(), binding: Consulta_onBinding()),
     GetPage(name: Routes.CONSULTA, page: () => ConsultaPage(), binding: ConsultaBinding()),
-    GetPage(name: Routes.NEW_HOME, page: () => NewHomePage(), binding: NewHomeBinding())
+    GetPage(name: Routes.NEW_HOME, page: () => NewHomePage(), binding: NewHomeBinding()),
+    GetPage(name: Routes.AGENDA, page: () => AgendaPage(), binding: AgendaBinding()),
+    GetPage(name: Routes.HISTORICO, page: () => HistoricoPage(), binding: HistoricoBinding()),
   ];
 }

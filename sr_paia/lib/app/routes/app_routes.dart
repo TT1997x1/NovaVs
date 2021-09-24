@@ -14,4 +14,6 @@
   static const CAD_ANIMAIS = '/CAD_ANIMAIS';
   static const CONSULTA_ON = '/CONSULTA_ON';
   static const CONSULTA = '/CONSULTA ';
+  static const AGENDA = '/AGENDA ';
+  static const HISTORICO = '/HISTORICO ';
  }

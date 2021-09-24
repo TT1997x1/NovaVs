@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:sr_paia/app/ui/home/home_page.dart';
 import 'package:sr_paia/app/ui/new_home/new_home_controller.dart';
@@ -9,12 +8,12 @@ class NewHomePage extends GetView<NewHomeController> {
   @override
   NewHomePage createState() => NewHomePage();
 
-  /* int _indiceAtual = 0;
+  int _indiceAtual = 0;
   final List<Widget> _telas = [
     HomePage(),
     HomePage(),
     ProdutoPage(),
-  ]; */
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +66,22 @@ class NewHomePage extends GetView<NewHomeController> {
               onTap: () {
                   controller.toConsulta();
               }),
+              ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text("Cadastrar animais"),
+              subtitle: Text("..."),
+              trailing: Icon(Icons.pending_actions_outlined),
+              onTap: () {
+                  controller.toAnimal();
+              }),
+              ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text("Produtos"),
+              subtitle: Text("..."),
+              trailing: Icon(Icons.pending_actions_outlined),
+              onTap: () {
+                  controller.toProduto();
+              }),
           ListTile(
               leading: Icon(Icons.account_circle),
               title: Text("Finalizar"),
@@ -82,15 +97,7 @@ class NewHomePage extends GetView<NewHomeController> {
           iconTheme: new IconThemeData(color: Colors.black),
       ),
       body:
-      Obx(() =>  _indiceAtual(
-        int _indiceAtual = 0;
-  final List<Widget> _telas = [
-    HomePage(),
-    HomePage(),
-    ProdutoPage(),
-  ];
-       _telas[_indiceAtual]
-      
+       _telas[_indiceAtual],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: controller.tabIndex.value,
         onTap: onTabTapped,
