@@ -16,7 +16,14 @@ class AnimaisController extends ICustomController {
   @override
   void onInit() {
     super.onInit();
+    getAnimais();
   }
+
+  getAnimais() async {
+    var teste = await repository.getAnimais();
+    _animaisList.value = teste;
+  }
+
 
   toAnimais() {
     Get.toNamed(Routes.ANIMAIS);
