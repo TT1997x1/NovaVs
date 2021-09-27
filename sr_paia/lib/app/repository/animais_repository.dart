@@ -23,6 +23,10 @@ class AnimaisRepository {
 }
     ''';
 
+   // _hasuraConnect.headers!.entries(
+   // {"x-hasura-admin-secret": "i8XQsYO19NP4BGk6IYHO41E6bFesa83f9TUNYnfuplEDknf4ajaXXwZ2V9wngFWc"}
+   // );
+
     var snapshot = await _hasuraConnect.query(query);
     for (var json in (snapshot['data']['Animais']) as List) {
       animaisModel = AnimaisModel.fromJson(json);

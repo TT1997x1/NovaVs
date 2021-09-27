@@ -1,9 +1,7 @@
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:sr_paia/app/base/CustomController.dart';
 import 'package:sr_paia/app/model/agenda/agenda_model.dart';
-import 'package:sr_paia/app/model/produto/produto_model.dart';
 import 'package:sr_paia/app/repository/agenda_repository.dart';
-import 'package:sr_paia/app/repository/produto_repository.dart';
 
 class AgendaController extends ICustomController {
   final AgendaRepository repository;

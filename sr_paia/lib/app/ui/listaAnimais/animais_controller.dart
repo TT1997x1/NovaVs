@@ -13,16 +13,9 @@ class AnimaisController extends ICustomController {
   set animaisList(value) => this._animaisList.value = value;
 
   //set listAnimais(List<AnimaisModel> listAnimais) {}
-
   @override
   void onInit() {
     super.onInit();
-    getAnimais();
-  }
-
-  getAnimais() async {
-    var teste = await repository.getAnimais();
-    _animaisList.value = teste;
   }
 
   toAnimais() {
