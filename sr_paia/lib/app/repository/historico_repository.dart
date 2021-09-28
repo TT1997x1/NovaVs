@@ -1,6 +1,5 @@
 import 'package:hasura_connect/hasura_connect.dart';
 import 'package:sr_paia/app/model/historico/historico_model.dart';
-import 'package:sr_paia/app/model/produto/produto_model.dart';
 
 class HistoricoRepository {
  final HasuraConnect _hasuraConnect;

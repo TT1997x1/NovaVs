@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:sr_paia/app/base/CustomController.dart';
 import 'package:sr_paia/app/model/animais/animais_model.dart';
@@ -8,6 +9,11 @@ class CadController extends ICustomController {
   final AnimaisRepository repository;
   CadController({required this.repository});
 
+  final FormKey = GlobalKey<FormState>();
+
+  final nomeAnimalController = TextEditingController();
+
+
   var idAnimal;
 
   final _animal = AnimaisModel.obs;
@@ -17,16 +23,25 @@ class CadController extends ICustomController {
   @override
   void onInit() {
     super.onInit();
-    idAnimal = (Get.arguments['idAnimal']);
-    getAnimaisId(idAnimal);
+    
+    if(Get.arguments != null){
+      idAnimal = (Get.arguments['idAnimal']);
+      getAnimaisId(idAnimal);
+    } else {
+      getAnimaisId(0);
+    }
   }
 
   getAnimaisId(int idAnimal) async {
     var teste = await repository.getAnimaisId(idAnimal);
-    _animal.value = teste;
+    nomeAnimalController.text = teste.nome;
   }
 
   toFormList() {
     Get.toNamed(Routes.FORM_LIST);
+  }
+
+    toSaveAnimal() {
+    var teste = nomeAnimalController.text;
   }
 }
