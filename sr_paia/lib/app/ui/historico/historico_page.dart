@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_getx_widget.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:sr_paia/app/ui/historico/historico_controller.dart';
-import 'package:sr_paia/app/ui/produto/produto_controller.dart';
 
 class HistoricoPage extends GetView<HistoricoController> {
 //repository and controller  injection bindings
@@ -11,14 +10,14 @@ class HistoricoPage extends GetView<HistoricoController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Produtos'),
+        title: Text('Historico'),
         actions: [
           PopupMenuButton(
             itemBuilder: (context) {
               List<PopupMenuEntry> list = [];
               list.add(
                 PopupMenuItem(
-                  child: Text(" Cadastrar novo Produto "),
+                  child: Text(" Excluir informação "),
                   value: 1,
                 ),
               );
@@ -29,7 +28,7 @@ class HistoricoPage extends GetView<HistoricoController> {
               );
               list.add(
                 PopupMenuItem(
-                  child: Text(" Editar Produto cadastrado "),
+                  child: Text(" Alterar iformação "),
                   value: 1,
                 ),
               );
@@ -62,22 +61,20 @@ class HistoricoPage extends GetView<HistoricoController> {
         ],
       ),
       body: Container(
-        child: GetX<ProdutoController>(
-            //initState: (state) {
-            //   Get.find<AnimaisController>().getAnimais(); },
+        child: GetX<HistoricoController>(
             builder: (_) {
-          return _.produtoList.length < 1
+          return _.historicoList.length < 1
               ? Center(
                   child: CircularProgressIndicator(),
                 )
               : ListView.builder(
                   itemBuilder: (context, index) {
                     return ListTile(
-                      title: Text(_.produtoList[index].racao),
-                      subtitle: Text(_.produtoList[index].descricao),
+                      title: Text(_.historicoList[index].nome),
+                      subtitle: Text(_.historicoList[index].tipo_consulta),
                     );
                   },
-                  itemCount: _.produtoList.length,
+                  itemCount: _.historicoList.length,
                 );
         }),
       ),

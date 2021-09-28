@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:get/get_instance/src/bindings_interface.dart';
 import 'package:hasura_connect/hasura_connect.dart';
-import 'package:sr_paia/app/repository/produto_repository.dart';
-import 'package:sr_paia/app/ui/produto/produto_controller.dart';
+import 'package:sr_paia/app/repository/historico_repository.dart';
+import 'package:sr_paia/app/ui/historico/historico_controller.dart';
 
 class HistoricoBinding implements Bindings {
   //HasuraConnect get hasuraConnect("https://clear-grubworm-88.hasura.app/v1/graphql");
@@ -17,9 +17,9 @@ HasuraConnect hasuraConnect = HasuraConnect(url, headers: headers);
 
  
 
-    Get.lazyPut<ProdutoController>(() {
-      return ProdutoController(
-          repository: ProdutoRepository(hasuraConnect));
-    });
+    Get.lazyPut<HistoricoController>(() {
+      return HistoricoController(
+          repository: HistoricoRepository(hasuraConnect));
+    }); 
   }
 }

@@ -6,7 +6,7 @@ class ConsultaPage extends GetView<ConsultaController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+     /*  appBar: AppBar(
         title: Text('Agendamento de consulta Presencial'),
         iconTheme: new IconThemeData(color: Colors.black),
         actions: [
@@ -57,7 +57,7 @@ class ConsultaPage extends GetView<ConsultaController> {
             },
           ),
         ],
-      ),
+      ), */
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
         color: Colors.white,

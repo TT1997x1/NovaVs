@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_getx_widget.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:sr_paia/app/ui/agenda/agenda_controller.dart';
-import 'package:sr_paia/app/ui/produto/produto_controller.dart';
 
 class AgendaPage extends GetView<AgendaController> {
 //repository and controller  injection bindings
@@ -10,77 +8,91 @@ class AgendaPage extends GetView<AgendaController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Produtos'),
-        actions: [
-          PopupMenuButton(
-            itemBuilder: (context) {
-              List<PopupMenuEntry> list = [];
-              list.add(
-                PopupMenuItem(
-                  child: Text(" Cadastrar novo Produto "),
-                  value: 1,
-                ),
-              );
-              list.add(
-                PopupMenuDivider(
-                  height: 10,
-                ),
-              );
-              list.add(
-                PopupMenuItem(
-                  child: Text(" Editar Produto cadastrado "),
-                  value: 1,
-                ),
-              );
-              list.add(
-                PopupMenuDivider(
-                  height: 10,
-                ),
-              );
-              list.add(
-                CheckedPopupMenuItem(
-                  child: Text(
-                    "Finalizar",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  value: 2,
-                  checked: true,
-                ),
-              );
-              return list;
-            },
-            icon: Icon(Icons.pets, size: 50, color: Colors.black12),
-            initialValue: 2,
-            onCanceled: () {
-              print("you");
-            },
-            onSelected: (value) {
-              print("value:$value");
-            },
-          ),
-        ],
-      ),
       body: Container(
-        child: GetX<ProdutoController>(
-            //initState: (state) {
-            //   Get.find<AnimaisController>().getAnimais(); },
-            builder: (_) {
-          return _.produtoList.length < 1
-              ? Center(
-                  child: CircularProgressIndicator(),
-                )
-              : ListView.builder(
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text(_.produtoList[index].racao),
-                      subtitle: Text(_.produtoList[index].descricao),
-                    );
-                  },
-                  itemCount: _.produtoList.length,
-                );
-        }),
-      ),
+          padding: EdgeInsets.only(top: 60, left: 40, right: 40),
+          color: Colors.white,
+          child: ListView(
+            children: <Widget>[
+             /*  SizedBox(
+                width: 128,
+                height: 128,
+                child: Image.asset("assets/app-logo.png"),
+              ), */
+              TextFormField(
+                autofocus: true,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  labelText: " Nome do cliente",
+                  labelStyle: TextStyle(
+                    color: Colors.black38,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                autofocus: true,
+                keyboardType: TextInputType.text,
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: " Data da consulta",
+                  labelStyle: TextStyle(
+                    color: Colors.black38,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20,
+                  ),
+                ),
+                style: TextStyle(fontSize: 20),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                autofocus: true,
+                keyboardType: TextInputType.text,
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: " Horario",
+                  labelStyle: TextStyle(
+                    color: Colors.black38,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                autofocus: true,
+                keyboardType: TextInputType.text,
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: " Tipo de consuta presencial/online",
+                  labelStyle: TextStyle(
+                    color: Colors.black38,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Container(
+                  height: 40,
+                  child: TextButton(
+                    child: Text(
+                      " Realizar agendamento",
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {},
+                  )),
+            ],
+          )),
     );
   }
 }

@@ -31,11 +31,18 @@ class NewHomeController extends ICustomController {
     Get.toNamed(Routes.PRODUTO);
   }
 
+  // ignore: non_constant_identifier_names
   toConsulta_on() {
     Get.toNamed(Routes.CONSULTA_ON);
   }
 
   toConsulta() {
     Get.toNamed(Routes.CONSULTA);
+  }
+  toAgenda() {
+    Get.toNamed(Routes.AGENDA);
+  }
+  toHistorico() {
+    Get.toNamed(Routes.HISTORICO);
   }
 }

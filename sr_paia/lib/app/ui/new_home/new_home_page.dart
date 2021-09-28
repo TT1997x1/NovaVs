@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sr_paia/app/ui/agenda/agenda_page.dart';
+import 'package:sr_paia/app/ui/consulta/consulta_page.dart';
 import 'package:sr_paia/app/ui/home/home_page.dart';
 import 'package:sr_paia/app/ui/new_home/new_home_controller.dart';
-import 'package:sr_paia/app/ui/produto/produto_page.dart';
+import 'package:sr_paia/app/ui/principal/principal_page.dart';
 
 class NewHomePage extends GetView<NewHomeController> {
   @override
@@ -11,8 +13,8 @@ class NewHomePage extends GetView<NewHomeController> {
 
   final List<Widget> _telas = [
     HomePage(),
-    HomePage(),
-    ProdutoPage(),
+    AgendaPage(),
+    ConsultaPage(),
   ];
 
   @override
@@ -41,7 +43,7 @@ class NewHomePage extends GetView<NewHomeController> {
                 subtitle: Text("..."),
                 trailing: Icon(Icons.arrow_forward),
                 onTap: () {
-                  debugPrint('toquei no drawer');
+                   controller.toHistorico();
                 }),
             ListTile(
                 leading: Icon(Icons.account_circle),
@@ -61,7 +63,7 @@ class NewHomePage extends GetView<NewHomeController> {
                 }),
             ListTile(
                 leading: Icon(Icons.account_circle),
-                title: Text("Solicitar consulta Presencial"),
+                title: Text("Solicitar consulta"),
                 subtitle: Text("..."),
                 trailing: Icon(Icons.pending_actions_outlined),
                 onTap: () {
@@ -107,7 +109,7 @@ class NewHomePage extends GetView<NewHomeController> {
                 icon: Icon(Icons.schedule), label: "Agenda"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.production_quantity_limits_sharp),
-                label: "Produtos"),
+                label: "Nova consulta"),
           ],
         )));
   }
