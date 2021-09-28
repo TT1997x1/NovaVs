@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:sr_paia/app/ui/cad_animais/cad_controller.dart';
 
 class CadPage extends GetView<CadController> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return// Obx(() =>
+     Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
         color: Colors.white,
-        child: ListView(
+        child:
+        
+        Form(
+          key: controller.FormKey,
+          child:
+        
+         ListView(
           children: <Widget>[
             SizedBox(
               width: 128,
@@ -17,6 +25,7 @@ class CadPage extends GetView<CadController> {
               child: Image.asset("assets/app-logo.png"),
             ),
             TextFormField(
+              controller: controller.nomeAnimalController,
               autofocus: true,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
@@ -106,8 +115,10 @@ class CadPage extends GetView<CadController> {
                   onPressed: () => controller.toFormList()(),
                 )),
           ],
+        )
         ),
       ),
+   // )
     );
   }
 }

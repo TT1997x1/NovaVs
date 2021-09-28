@@ -33,7 +33,7 @@ class AnimaisController extends ICustomController {
     Get.toNamed(Routes.PRODUTO);
   }
 
-  toCad_animais(int idAnimal) {
+  toCad_animais(int idAnimal) async {
     // Get.toNamed(Routes.CAD_ANIMAIS);
     Get.toNamed<dynamic>(Routes.CAD_ANIMAIS, parameters: {
       "idAnimal": idAnimal.toString(),
