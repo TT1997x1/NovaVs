@@ -25,8 +25,8 @@ import 'package:sr_paia/app/ui/principal/principal_bindigs.dart';
 import 'package:sr_paia/app/ui/principal/principal_page.dart';
 import 'package:sr_paia/app/ui/produto/produto_bindings.dart';
 import 'package:sr_paia/app/ui/produto/produto_page.dart';
-import 'package:sr_paia/app/ui/senha/senha_bindings.dart';
-import 'package:sr_paia/app/ui/senha/senha_page.dart';
+//import 'package:sr_paia/app/ui/senha/senha_bindings.dart';
+//import 'package:sr_paia/app/ui/senha/senha_page.dart';
 
 
 class AppPages {
@@ -34,7 +34,7 @@ class AppPages {
     GetPage(name: Routes.INITIAL, page: () => LoginPage(), binding: LoginBinding()),
     GetPage(name: Routes.LOGIN, page: () => LoginPage(), binding: LoginBinding()),
     GetPage(name: Routes.HOME, page: () => HomePage(), binding: HomeBinding()),
-    GetPage(name: Routes.SENHA, page: () => SenhaPage(), binding: SenhaBinding()),
+   // GetPage(name: Routes.SENHA, page: () => SenhaPage(), binding: SenhaBinding()),
     GetPage(name: Routes.CADASTRO, page: () => CadastroPage(), binding: CadastroBinding()),
     GetPage(name: Routes.PRINCIPAL, page: () => PrincipalPage(), binding: PrincipalBinding()),
     GetPage(name: Routes.ANIMAIS, page: () => AnimaisPage(), binding: AnimaisBinding()),

@@ -9,6 +9,8 @@ class LoginPage extends GetView<LoginController> {
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
         color: Colors.white,
+        child: Form(
+          key: controller.loginFormKey,
         child: ListView(
           children: <Widget>[
             SizedBox(
@@ -17,6 +19,7 @@ class LoginPage extends GetView<LoginController> {
               child: Image.asset("assets/app-logo.png"),
             ),
             TextFormField(
+             controller: controller.emailController,
               autofocus: true,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
@@ -25,6 +28,7 @@ class LoginPage extends GetView<LoginController> {
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
+            //  validator: controller.validator,
                 ),
               ),
             ),
@@ -32,6 +36,7 @@ class LoginPage extends GetView<LoginController> {
               height: 10,
             ),
             TextFormField(
+              controller: controller.passwordController,
               autofocus: true,
               keyboardType: TextInputType.text,
               obscureText: true,
@@ -53,7 +58,7 @@ class LoginPage extends GetView<LoginController> {
                   "recuperar senha",
                   textAlign: TextAlign.right,
                 ),
-                onPressed: () => controller.toRecupersenha(),
+                onPressed: () => {},
               ),
             ),
             SizedBox(
@@ -99,7 +104,7 @@ class LoginPage extends GetView<LoginController> {
                       )
                     ],
                   ),
-                  onPressed: () => controller.toNewHome(),
+                 onPressed: controller.login,
                 ),
               ),
             ),
@@ -158,11 +163,12 @@ class LoginPage extends GetView<LoginController> {
                     "Cadastre-se",
                     textAlign: TextAlign.center,
                   ),
-                  onPressed: () => controller.toCadastro(),
+                  onPressed: () => {},
                 )),
           ],
         ),
       ),
+    ),
     );
   }
 }

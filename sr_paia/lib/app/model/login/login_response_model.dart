@@ -1,10 +1,11 @@
 import 'dart:convert';
 
-LoginResponseModel loginReposeModelFromJson(String str) => LoginResponseModel.fromJson(json.decode(str));
+LoginResponseModel loginReposeModelFromJson(String string) => LoginResponseModel.fromJson(json.decode(string));
 
 String loginReposeModelToJson(LoginResponseModel data) => json.encode(data.toJson());
 
 class LoginResponseModel {
+   static var obs;
     LoginResponseModel({
         required this.data,
     });
