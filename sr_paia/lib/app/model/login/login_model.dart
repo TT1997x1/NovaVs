@@ -13,8 +13,8 @@ class LoginModel {
      required this.Email,
      required this.Senha,
     });
-    
-    int Id_usuario;
+
+    String Id_usuario;
     String Nome;
     String Email;
     String Senha;
