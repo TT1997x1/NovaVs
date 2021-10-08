@@ -9,7 +9,7 @@ class LoginController extends ICustomController {
   final loginFormKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
- // final _usuarioList = <LoginModel>[].obs;
+  // final _usuarioList = <LoginModel>[].obs;
 
   final LoginRepository repository;
   LoginController({required this.repository}) : assert(repository != null);
@@ -19,8 +19,6 @@ class LoginController extends ICustomController {
   @override
   void onReady() {
     super.onReady();
-    emailController.text = 'Luan_henriquex1@hotmail.com';
-    super.onInit();
   }
 
   @override
@@ -32,18 +30,16 @@ class LoginController extends ICustomController {
 
   /* String validator(String value) {
     if (value.isEmpty) {
-      return 'Please this field must be filled';
+      return 'Email invalido';
     }
-    return null;
-  } */
+    return value;
+  }  */
 
   void login() {
     if (loginFormKey.currentState!.validate()) {
       checkUser(emailController.text, passwordController.text).then((auth) {
         if (auth) {
-          Get.snackbar('Login', 'Login com sucesso',
-              onTap: toNewHome()
-              );
+          Get.snackbar('Login', 'Login com sucesso', onTap: toNewHome());
         } else {
           Get.snackbar('Login', 'Invalido email ou senha');
         }
@@ -55,9 +51,8 @@ class LoginController extends ICustomController {
 
   // Api Simulation
   Future<bool> checkUser(String email, String senha) async {
-  
-   LoginModel usuario = await  repository.getUsuarioEmail(email);
-    
+    LoginModel usuario = await repository.getUsuarioEmail(email);
+
     if (senha == usuario.Senha) {
       return Future.value(true);
     }

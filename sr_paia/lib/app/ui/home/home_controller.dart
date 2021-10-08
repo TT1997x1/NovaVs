@@ -32,4 +32,7 @@ class HomeController extends ICustomController {
   toConsulta() {
     Get.toNamed(Routes.CONSULTA);
   }
+  toHistorico() {
+    Get.toNamed(Routes.HISTORICO);
+  }
 }

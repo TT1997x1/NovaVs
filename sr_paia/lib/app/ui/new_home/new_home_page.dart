@@ -4,7 +4,6 @@ import 'package:sr_paia/app/ui/agenda/agenda_page.dart';
 import 'package:sr_paia/app/ui/consulta/consulta_page.dart';
 import 'package:sr_paia/app/ui/home/home_page.dart';
 import 'package:sr_paia/app/ui/new_home/new_home_controller.dart';
-import 'package:sr_paia/app/ui/principal/principal_page.dart';
 
 class NewHomePage extends GetView<NewHomeController> {
   @override

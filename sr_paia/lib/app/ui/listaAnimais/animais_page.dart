@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sr_paia/app/ui/cad_animais/cad_page.dart';
 import 'package:sr_paia/app/ui/listaAnimais/animais_controller.dart';
 
 class AnimaisPage extends GetView<AnimaisController> {
@@ -76,7 +77,9 @@ class AnimaisPage extends GetView<AnimaisController> {
                           _.animaisList[index].descricao),
                       onTap: () => controller
                           .toCad_animais(_.animaisList[index].idAnimal),
+                         // Get.to(CadPage(),arguments: [_.animaisList[index].nome] )
                     );
+                    
                   },
                   itemCount: _.animaisList.length,
                 );

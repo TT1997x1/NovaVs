@@ -3,6 +3,7 @@ import 'package:sr_paia/app/model/animais/animais_model.dart';
 import 'package:sr_paia/app/repository/animais_repository.dart';
 import 'package:get/get.dart';
 import 'package:sr_paia/app/routes/app_routes.dart';
+import 'package:sr_paia/app/ui/cad_animais/cad_page.dart';
 
 class AnimaisController extends ICustomController {
   final AnimaisRepository repository;
@@ -24,7 +25,6 @@ class AnimaisController extends ICustomController {
     _animaisList.value = teste;
   }
 
-
   toAnimais() {
     Get.toNamed(Routes.ANIMAIS);
   }
@@ -35,12 +35,14 @@ class AnimaisController extends ICustomController {
 
   toCad_animais(int idAnimal) async {
     // Get.toNamed(Routes.CAD_ANIMAIS);
-    Get.toNamed<dynamic>(Routes.CAD_ANIMAIS, parameters: {
-      "idAnimal": idAnimal.toString(),
-    });
-  }
+    Get.toNamed(Routes.CAD_ANIMAIS, parameters: {
+     "idAnimal": idAnimal.toString(),
+   // Get.to(CadPage(), arguments: idAnimal);
+  });
+}
   /*  AddAnimais() async {
     repository.addAnimais(name, raca, cor, sexo, descricao);
     getAnimais();
   }  */
+
 }

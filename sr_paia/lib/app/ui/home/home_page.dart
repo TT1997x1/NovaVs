@@ -99,7 +99,7 @@ class HomePage extends GetView<HomeController> {
                   "Nossa Historia",
                   textAlign: TextAlign.center,
                 ),
-                onPressed: () => controller.toProduto(),
+                onPressed: () => controller.toHistorico(),
               ),
               SizedBox(
                 height: 20,

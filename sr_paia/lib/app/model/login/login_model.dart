@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-LoginModel loginModelFromJson(String string) => LoginModel.fromJson(json.decode(string));
+LoginModel loginModelFromJson(String str) => LoginModel.fromJson(json.decode(str));
 
 String loginModelToJson(LoginModel data) => json.encode(data.toJson());
 
@@ -14,7 +14,7 @@ class LoginModel {
      required this.Senha,
     });
 
-    String Id_usuario;
+    int Id_usuario;
     String Nome;
     String Email;
     String Senha;
@@ -23,14 +23,14 @@ class LoginModel {
        Id_usuario: json ["Id_usuario"],
         Nome: json ["Nome"],
         Email: json["Email"],
-        Senha: json["Senha"],
+        Senha: json["Senha"].toString(),
     );
 
     Map<String, dynamic> toJson() => {
        "Id_usuario": Id_usuario,
         "Nome" : Nome,
         "Email": Email,
-        "Senha": Senha,
+        "Senha": Senha.toString(),
     };
 }
 

@@ -19,11 +19,11 @@ class CadPage extends GetView<CadController> {
         
          ListView(
           children: <Widget>[
-            SizedBox(
+            /* SizedBox(
               width: 128,
               height: 128,
               child: Image.asset("assets/app-logo.png"),
-            ),
+            ), */
             TextFormField(
               controller: controller.nomeAnimalController,
               autofocus: true,
